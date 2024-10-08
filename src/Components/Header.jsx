@@ -19,6 +19,16 @@ const Header = () => {
     fetchGifCategories();
   }, []);
 
+  const handleToggleCategories = () => {
+    setShowCategories((prev) => !prev);
+    setShowMobileMenu(false);
+  };
+
+  const handleToggleMobileMenu = () => {
+    setShowMobileMenu((prev) => !prev);
+    setShowCategories(false);
+  };
+
   return (
     <nav>
       <div className="relative flex gap-4 justify-between items-center mb-2">
@@ -55,7 +65,7 @@ const Header = () => {
             </div>
           )}
 
-          <button>
+          <button onClick={handleToggleMobileMenu}>
             <HiMiniBars3BottomRight
               className="text-sky-400 block lg:hidden"
               size={30}
