@@ -7,6 +7,7 @@ import GifSearch from "./GifSearch";
 const Header = () => {
   const [categories, setCategories] = useState([]);
   const [showCategories, setShowCategories] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const { gf, favourites } = GifState();
 

@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Gifs = ({ gif, hover = true }) => {
+  if (!gif) {
+    return <div>Loading...</div>;
+  }
   return (
     <Link to={`/${gif.type}s/${gif.slug}`}>
       <div className="w-full mb-2 relative cursor-pointer group aspect-video">
